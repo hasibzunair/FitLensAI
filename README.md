@@ -15,7 +15,7 @@ If you've been at the local gym, you know there are countless number of exercise
 
 I developed Fitness-VQA, a multimodal multilingual (English and বাংলা) dataset that enables seamless multi-turn conversations for visual question answering about fitness workouts. The methodology and technical details of its creation will be added later.
 
-FitLensAI is a Llama 3.2 Vision 11B vision-language model (VLM) trained using low-rank adaptation (LoRA) for parameter-efficient fine-tuning on Fitness-VQA. Unlike existing off-the-shelf MLLMs like Pixtral, Qwen-VL and more recently Llama 3.2 Vision, FitLensAI generates tailored responses to questions about fitness workout images in English and বাংলা (work in progress), and enables dynamic multi-turn conversations.
+FitLensAI is a Llama 3.2 Vision 11B vision-language model (VLM) trained using low-rank adaptation (LoRA) for parameter-efficient fine-tuning on Fitness-VQA. Unlike existing off-the-shelf MLLMs like Pixtral, Qwen-VL and more recently Llama 3.2 Vision, FitLensAI generates tailored responses to questions about fitness workout images in English and বাংলা (not good yet!), and enables dynamic multi-turn conversations.
 
 ## Features
 
