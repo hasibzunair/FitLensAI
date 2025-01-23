@@ -13,9 +13,11 @@ FitLensAI is a multimodal large language model with multilingual (English and �
 
 If you've been at the local gym, you know there are countless number of exercises, both cardio and weight training, that focus on different parts of the body. What if you wanted to know about a specific workout, like the name, which muscles are targeted and how to correctly do it?
 
-I developed Fitness-VQA, a multimodal multilingual (English and বাংলা) dataset that enables seamless multi-turn conversations for visual question answering about fitness workouts. The methodology and technical details of its creation will be added later.
+I developed Fitness-VQA, a multimodal multilingual (English and বাংলা) dataset that enables seamless multi-turn conversations for visual question answering about fitness workouts.
 
 FitLensAI is a Llama 3.2 Vision 11B vision-language model (VLM) trained using low-rank adaptation (LoRA) for parameter-efficient fine-tuning on Fitness-VQA. FitLensAI generates tailored responses to questions about fitness workout images in English and বাংলা, and enables dynamic multi-turn conversations.
+
+The methodology and technical details of its creation will be added later.
 
 ## Features
 
@@ -74,7 +76,6 @@ This project demonstrates that we can carefully design datasets such that a sing
 
 ### Todos
 
-* Add dataset details, training code and pretrained models
 * More data to make it work for long sequences in বাংলা
 * Train Pixtral 12B
 
