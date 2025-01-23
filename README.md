@@ -15,7 +15,7 @@ If you've been at the local gym, you know there are countless number of exercise
 
 I developed Fitness-VQA, a multimodal multilingual (English and বাংলা) dataset that enables seamless multi-turn conversations for visual question answering about fitness workouts. The methodology and technical details of its creation will be added later.
 
-FitLensAI is a Llama 3.2 Vision 11B vision-language model (VLM) that is trained using low-rank adaptation (LoRA) for parameter efficient finetuning on Fitness-VQA. It can generate tailored responses to questions about images of fitness workouts in English and বাংলা, in dynamic multi-turn conversations.
+FitLensAI is a Llama 3.2 Vision 11B vision-language model (VLM) trained using low-rank adaptation (LoRA) for parameter-efficient fine-tuning on Fitness-VQA. FitLensAI generates tailored responses to questions about fitness workout images in English and বাংলা, and enables dynamic multi-turn conversations.
 
 ## Features
 
@@ -29,7 +29,7 @@ FitLensAI is a Llama 3.2 Vision 11B vision-language model (VLM) that is trained 
 | Which body part is the focus of the workout? | The seated row is a compound exercise that targets the latissimus dorsi, trapezius, rhomboids, and biceps muscles. It is an effective exercise for building strength and size in the back, and can be performed with or without a barbell. | Latissimus Dorsi, Rear Deltoids, Rhomboids, Biceps |
 | How do I do this exercise step by step from the image? | Here are the steps to do a seated row exercise: 1)Sit on the rowing machine with your feet flat on the floor or on the footrests, depending on the machine. 2) Grasp the bar with an overhand grip, with your hands slightly wider than shoulder-width apart. 3) Lean back slightly and keep your back straight, engaging your core muscles to maintain good posture. 4) Pull the bar towards your chest, keeping your elbows close to your body and your biceps engaged. 5) Squeeze your shoulder blades together and pull the bar towards your chest, then slowly return to the starting position. 6) Repeat for the desired number of repetitions. Remember to focus on proper form and technique to get the most out of the exercise and avoid injury. | Sit on seated cable row machine with legs extended. Grip attachment with hands slightly wider than shoulders. Pull attachment to lower chest, focusing on pulling movement with upper back and lats. Avoid using momentum and swinging. Touch chest lightly with attachment, then push body forward slightly to return attachment to starting position. Maintain upright posture throughout movement. |
 
-Existing MLLMs like Llama 3.2 are not capable of generating specialized responses. This is because MLLMs are generalist models that can perform wide range of tasks, think jack of all trades. The example above shows that while Llama 3.2 is able to understand the question, the output is not precise and quite often irrelevant, leading to information overload! In contrast, FitLensAI gives precise and context-appropriate answers.
+Existing MLLMs like Llama 3.2 are not capable of generating specialized responses. This is because MLLMs are generalist models that can perform wide range of tasks, think jack of all trades. The example above shows that while Llama 3.2 is able to understand the question, the output is not precise and quite often irrelevant, leading to information overload! In contrast, FitLensAI gives precise, concise and context-appropriate answers.
 
 ### FitLensAI is designed for multilingual conversations
 
@@ -41,7 +41,7 @@ Existing MLLMs like Llama 3.2 are not capable of generating specialized response
 | এই ওয়ার্কআউট টার্গেট কোন পেশী? | ব্যাঙ্গের ওয়ার্কআউট মূলত পেশীগুলির গ্রুপের একটি অংশের উপর ফোকাস করে, যা সামনের পায়ের পেশী সহ মোটামুটি সামনের দিকের পেশীগুলিকে অধিগত করে। এই পেশীগুলির মধ্যে রয়েছে: ট্রায়াসেপস সার্ভিস: এই পেশ | পেকস, ডেলটোইডস, ট্রিক্সপস, প্লেক |
 | এই ব্যায়াম করার পদক্ষেপ কি কি? | ব্যাঙ্গ ব্যাগ করার জন্য নিম্নলিখিত পদক্ষেপগুলি অনুসরণ করুন: অবস্থান নির্বাচন করুন: একটি ব্যাঙ্গ ব্যাগ ব্যাগ করার জন্য, আপনাকে একটি বেন্চ বা একটি ব্যাঙ্গ স্ট্যান্ডে চেয়ার বা একটি ব্যাঙ্গ ব্যাগ ব্যাগ করার জন্য সম্পূর্ণ প | বিসেপ বার জড়িয়ে ব্রেস্টের উপর দাঁড়িয়ে, নমনীয়ভাবে হাতগুলিতে বারটি ধাক্কা দিয়ে, হাতগুলির গুঠন বে |
 
-Current MLLMs primarily focus on English and few other major languages, limiting practical applications in multilingual settings. Some examples include VLMs like Pixtral, Qwen-VL and more recently Llama 3.2 Vision. In the example, Llama 3.2 generates incorrect sentences and keywords that are entirely out of context. FitLensAI performs somewhat better, as it produces responses that are more relevant. However, while it fails to generate fully accurate details, the words are related to fitness workouts.
+Current MLLMs primarily focus on English and few other major languages, limiting practical applications in multilingual settings. Some examples include VLMs like Pixtral, Qwen-VL and more recently Llama 3.2 Vision. In the example, Llama 3.2 generates incorrect sentences and keywords that are entirely out of context. FitLensAI performs somewhat better, as it produces responses that are more relevant. While it fails to generate accurate long sequences in detail, the words are related to fitness workouts.
 
 ### Limitations
 
@@ -68,6 +68,10 @@ flowchart TD
     M --> A
 ```
 
+### Takeaways
+
+This project demonstrates that we can carefully design datasets such that a single model can have multimodal, multilingual and multi-turn conversational capabilities. All this, without relying on other models, for example machine translation models to translate from one language to another.
+
 ### Todos
 
 * More data to make it work for long sequences in বাংলা
@@ -75,4 +79,4 @@ flowchart TD
 
 ## Acknowledgements
 
-This system was built on top of [Llama 3.2 Vision 11B](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/). 
+This system was built on top of [Llama 3.2 Vision 11B](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/).
