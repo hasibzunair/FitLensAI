@@ -2,6 +2,8 @@
 
 FitLensAI is a multimodal large language model with multilingual (English and বাংলা) and multi-turn conversational capabilities, that helps you understand fitness workouts from images.
 
+![Alt text](./media/demo.gif)
+
 ## Examples
 
 | Input Image                  | Input Question and Output Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -57,7 +59,7 @@ flowchart TD
     F -->|Text Processing| H[Prepare Text]
     G --> I[Tokenizer]
     H --> I
-    I -->|Encode Image & Text| J[FitLensAI Multimodal Multilingual Model]
+    I -->|Encode Image & Text| J[FitLensAI]
     J -->|Generate Response| K[Text Iterator Streamer]
     K -->|Stream Text| L[Real-time Output]
     L --> M[Display in Chat Interface]
@@ -66,11 +68,11 @@ flowchart TD
 
 ### Limitations and Future Work
 
-The model fails when asked to provide detailed answers in বাংলা, bascially when required to generate long and coherent sequences of text. While Fitness-VQA includes samples in বাংলা, the dataset is insufficient for the model to learn and generate accurate, context-appropriate and detailed responses in the language. It struggles to understand and capture the nuances of বাংলা, resulting in incomplete or irrelevant outputs. Future work will aim at incorporating diverse and extensive multilingual training data to enhance the model's ability to handle such tasks effectively and expand its applicability real-world multilingual scenarios.
+The model fails when asked to provide detailed answers in বাংলা, bascially when required to generate long and coherent sequences of text. While Fitness-VQA includes samples in বাংলা, the dataset is insufficient for the model to learn and generate accurate, context-appropriate and detailed responses in the language. It struggles to understand and capture the nuances of বাংলা, resulting in incomplete or irrelevant outputs. Future work will aim at incorporating diverse and extensive multilingual training data to enhance the model's ability to handle such tasks effectively and expand its applicability in real-world multilingual scenarios.
 
 ### Takeaways
 
-This project demonstrates that we can design and build datasets such that only a single model can have multimodal, multilingual and multi-turn conversational capabilities. All this, without relying on other models, for example machine translation models to translate from one language to another.
+This project demonstrates that we can design and build datasets such that only a single model can have multimodal, multilingual and multi-turn conversational capabilities. All this, without relying on other large models, for example machine translation models to translate from one language to another.
 
 ### Todos
 
