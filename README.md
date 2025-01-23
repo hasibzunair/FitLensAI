@@ -11,13 +11,11 @@ FitLensAI is a multimodal large language model with multilingual (English and �
 
 ## About
 
-If you've been at the local gym, you know there are countless number of exercises, both cardio and weight training, that focus on different parts of the body. What if you wanted to know about a specific workout, like the name, which muscles are targeted and how to correctly do it?
+If you've been at the local gym, you know there are countless number of exercises, both cardio and weight training, that focus on different parts of the body. What if you wanted to know about a specific workout, from the name, to which muscles are being targeted, and the steps to do it?
 
-I developed Fitness-VQA, a multimodal multilingual (English and বাংলা) dataset that enables seamless multi-turn conversations for visual question answering about fitness workouts.
+I developed Fitness-VQA, a multimodal multilingual (English and বাংলা) dataset that enables seamless multi-turn conversations for visual question answering about fitness workouts. The methodology and technical details of its creation will be added later.
 
-FitLensAI is a Llama 3.2 Vision 11B vision-language model (VLM) trained using low-rank adaptation (LoRA) for parameter-efficient fine-tuning on Fitness-VQA. FitLensAI generates tailored responses to questions about fitness workout images in English and বাংলা, and enables dynamic multi-turn conversations.
-
-The methodology and technical details of its creation will be added later.
+FitLensAI is a Llama 3.2 Vision 11B vision-language model (VLM) trained using low-rank adaptation (LoRA) for parameter-efficient fine-tuning on Fitness-VQA. Unlike existing off-the-shelf MLLMs like Pixtral, Qwen-VL and more recently Llama 3.2 Vision, FitLensAI generates tailored responses to questions about fitness workout images in English and বাংলা (work in progress), and enables dynamic multi-turn conversations.
 
 ## Features
 
@@ -43,11 +41,7 @@ Existing MLLMs like Llama 3.2 are not capable of generating specialized response
 | এই ওয়ার্কআউট টার্গেট কোন পেশী? | ব্যাঙ্গের ওয়ার্কআউট মূলত পেশীগুলির গ্রুপের একটি অংশের উপর ফোকাস করে, যা সামনের পায়ের পেশী সহ মোটামুটি সামনের দিকের পেশীগুলিকে অধিগত করে। এই পেশীগুলির মধ্যে রয়েছে: ট্রায়াসেপস সার্ভিস: এই পেশ | পেকস, ডেলটোইডস, ট্রিক্সপস, প্লেক |
 | এই ব্যায়াম করার পদক্ষেপ কি কি? | ব্যাঙ্গ ব্যাগ করার জন্য নিম্নলিখিত পদক্ষেপগুলি অনুসরণ করুন: অবস্থান নির্বাচন করুন: একটি ব্যাঙ্গ ব্যাগ ব্যাগ করার জন্য, আপনাকে একটি বেন্চ বা একটি ব্যাঙ্গ স্ট্যান্ডে চেয়ার বা একটি ব্যাঙ্গ ব্যাগ ব্যাগ করার জন্য সম্পূর্ণ প | বিসেপ বার জড়িয়ে ব্রেস্টের উপর দাঁড়িয়ে, নমনীয়ভাবে হাতগুলিতে বারটি ধাক্কা দিয়ে, হাতগুলির গুঠন বে |
 
-Current MLLMs primarily focus on English and few other major languages, limiting practical applications in multilingual settings. Some examples include VLMs like Pixtral, Qwen-VL and more recently Llama 3.2 Vision. In the example, Llama 3.2 generates incorrect sentences and keywords that are entirely out of context. FitLensAI performs somewhat better, as it produces responses that are more relevant. While it fails to generate accurate long sequences in detail, the words are related to fitness workouts.
-
-### Limitations
-
-The model fails when tasked with describing workouts in বাংলা, especially when required to generate long and coherent sequences of text. While Fitness-VQA includes question-answer pairs in বাংলা, the dataset is insufficient for the model to learn and generate accurate, context-appropriate and detailed responses in the language. It struggles to understand and capture the nuances of বাংলা, resulting in incomplete or irrelevant outputs. Future work will aim at incorporating diverse and extensive multilingual training data to enhance the model's ability to handle such tasks effectively and expand its applicability real-world multilingual scenarios.
+Current MLLMs primarily focus on English and few other major languages, limiting practical applications for niche languages as well as in multilingual settings. Some examples include VLMs like Pixtral, Qwen-VL and more recently Llama 3.2 Vision. In the example, Llama 3.2 generates incorrect sentences and keywords that are entirely out of context. FitLensAI performs somewhat better, as it produces responses that are more relevant. While it fails to generate accurate long sequences in detail, the words are related to fitness workouts.
 
 ### System Architecture
 
@@ -70,9 +64,13 @@ flowchart TD
     M --> A
 ```
 
+### Limitations and Future Work
+
+The model fails when asked to provide detailed answers in বাংলা, bascially when required to generate long and coherent sequences of text. While Fitness-VQA includes samples in বাংলা, the dataset is insufficient for the model to learn and generate accurate, context-appropriate and detailed responses in the language. It struggles to understand and capture the nuances of বাংলা, resulting in incomplete or irrelevant outputs. Future work will aim at incorporating diverse and extensive multilingual training data to enhance the model's ability to handle such tasks effectively and expand its applicability real-world multilingual scenarios.
+
 ### Takeaways
 
-This project demonstrates that we can carefully design datasets such that a single model can have multimodal, multilingual and multi-turn conversational capabilities. All this, without relying on other models, for example machine translation models to translate from one language to another.
+This project demonstrates that we can design and build datasets such that only a single model can have multimodal, multilingual and multi-turn conversational capabilities. All this, without relying on other models, for example machine translation models to translate from one language to another.
 
 ### Todos
 
@@ -81,4 +79,4 @@ This project demonstrates that we can carefully design datasets such that a sing
 
 ## Acknowledgements
 
-This system was built on top of [Llama 3.2 Vision 11B](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/).
+This project was built on top of [Llama 3.2 Vision 11B](https://ai.meta.com/blog/llama-3-2-connect-2024-vision-edge-mobile-devices/).
