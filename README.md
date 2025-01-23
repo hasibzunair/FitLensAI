@@ -74,6 +74,7 @@ This project demonstrates that we can carefully design datasets such that a sing
 
 ### Todos
 
+* Add dataset details, training code and pretrained models
 * More data to make it work for long sequences in বাংলা
 * Train Pixtral 12B
 
