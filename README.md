@@ -72,7 +72,7 @@ FitLensAI currently fails miserably when asked to provide detailed answers in рж
 
 ### Takeaways
 
-This project takes a baby step in showing that we can design and build datasets such that AI agents can have multimodal, multilingual and multi-turn conversational capabilities. All this, without relying on other large models, for example machine translation models to translate from one language to another.
+This project takes a baby step in showing that we can design and build datasets such that AI systems can have multimodal, multilingual and multi-turn conversational capabilities. All this, without relying on other large models, for example machine translation models to translate from one language to another.
 
 ### Todos
 
