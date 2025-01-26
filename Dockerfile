@@ -1,6 +1,9 @@
 # Use an official GPU-enabled PyTorch base image
 FROM python:3.9-slim
 
+# Install git
+RUN apt-get update && apt-get install -y git
+
 # Copy the requirements file into the image
 COPY ./requirements.txt /app/requirements.txt
 

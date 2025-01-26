@@ -85,4 +85,7 @@ demo = gr.ChatInterface(fn=bot_streaming, title="🏋️‍♂️ FitLensAI - Sn
       multimodal=True,
       css="footer{display:none !important}")
 
-demo.launch(debug=True)
+demo.launch(server_name="0.0.0.0", 
+            server_port=7860, 
+            share=True
+            )
