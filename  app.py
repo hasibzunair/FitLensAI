@@ -1,13 +1,9 @@
 from unsloth import FastVisionModel
 from transformers import TextIteratorStreamer
 from PIL import Image
-import requests
-import torch
 from threading import Thread
 import gradio as gr
-from gradio import FileData
 import time
-import spaces
 
 use_qwen = False
 ckpt = "hasibzunair/llama-3.2-vision-11b-instruct-no-enc-mm-exr"
@@ -18,7 +14,6 @@ model, tokenizer = FastVisionModel.from_pretrained(
 )
 FastVisionModel.for_inference(model)
 
-@spaces.GPU
 def bot_streaming(message, history, max_new_tokens=128):
 
     txt = message["text"]

@@ -1,0 +1,30 @@
+# Custom
+
+.DS_Store
+media/
+
+# Git and version control
+.git
+.gitignore
+
+# Development files
+**/node_modules
+*.log
+.env
+
+# Python specific
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+
+# IDE folders
+.vscode
+.idea
+
+# Build and temporary files
+build/
+dist/
+*.egg-info
+.tmp
