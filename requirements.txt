@@ -2,4 +2,3 @@ unsloth
 torch
 gradio
 spaces
-git+https://github.com/huggingface/transformers.git
