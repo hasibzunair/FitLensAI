@@ -84,14 +84,3 @@ demo.launch(server_name="0.0.0.0",
             server_port=7860
            )
 # Go here: https://rtnmcw6tol3yv6-7860.proxy.runpod.net/
-
-# Build
-# docker buildx build -t gr-hello-app:v1 --platform Linux/amd64 .
-# Run locally
-# docker run -p 7860:7860 --name hello-app gr-hello-app:v1
-# Tag
-# docker tag gr-hello-app:v1 hasibzunair/gr-hello-app:v1
-# Push
-# docker push hasibzunair/gr-hello-app:v1
-# Run from hub
-# docker run -p 7860:7860 --name hello-app hasibzunair/gr-hello-app:v1

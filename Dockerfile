@@ -25,3 +25,15 @@ EXPOSE 7860
 
 # Command to run your Gradio app
 CMD ["python", "app.py"]
+
+### HOW TO ###
+# Build
+# docker buildx build -t gr-hello-app:v1 --platform Linux/amd64 .
+# Run locally
+# docker run -p 7860:7860 --name hello-app gr-hello-app:v1
+# Tag
+# docker tag gr-hello-app:v1 hasibzunair/gr-hello-app:v1
+# Push
+# docker push hasibzunair/gr-hello-app:v1
+# Run from hub
+# docker run -p 7860:7860 --name hello-app hasibzunair/gr-hello-app:v1
