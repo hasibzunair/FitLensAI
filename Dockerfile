@@ -11,7 +11,7 @@ COPY ./requirements.txt /app/requirements.txt
 WORKDIR /app
 
 # Install any needed packages specified in requirements.txt
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Uninstall the existing unsloth package and install the latest version from GitHub
 # RUN pip uninstall unsloth -y && \
